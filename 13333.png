@@ -1,0 +1,9 @@
+def mult(l):
+  count = 1
+  for i in l:
+    count *= i
+  return count
+
+list1 = eval(input("enter a list:"))
+val = mult(list1)
+print("Multiplication of all numbers in a list = ", val)

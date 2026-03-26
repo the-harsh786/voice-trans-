@@ -1,0 +1,48 @@
+import tkinter as tk
+from tkinter import *
+from PIL import ImageTk, Image
+
+win1 = Tk()
+win1.geometry("1366x768+0+0")
+win1.title("Homepage")
+win1.state("zoomed")
+homeframe = Frame(width=1920, height=1080)
+homeframe.place(x=0, y=0)
+
+def instructions():
+    win2 = Tk()
+    win2.geometry("1366x768+0+0")
+    win2.title("Intructions")
+    homeframe2 = Frame(width=1920, height=1080)
+    homeframe2.place(x=0, y=0)
+    img2 = Image.open("INSTRUCTIONS.jpg")
+    img2 = ImageTk.PhotoImage(img2)
+    label3 = Label(homeframe2, image = img2)
+    label3.pack()
+    win2.mainloop()
+
+def translate():
+    win3 = Tk()
+    win3.geometry("1366*768+0+0")
+    win3.title("Script-to-Text")
+    win3.state("zoomed")
+    homeframe3 = Frame()
+    
+
+    
+
+img1 = Image.open("S1.jpg")
+img1 = ImageTk.PhotoImage(img1)
+label1 = Label(homeframe, image = img1)
+label1.pack()
+label2 = Label(win1,font = "TimesNewRoman", text = "SPEECH - T0 - TEXT CONVERTER", bg = "white", width = 40)
+label2.place(x = 700, y = 500)
+label2.pack()
+b1=tk.Button(text="Enter the Journey",fg="cyan",bg="black",font='helvetica', command = instructions)
+b1.config(height = 1 ,width = 25)
+b1.place(x = 625, y = 650)
+win1.mainloop()
+
+
+
+    
